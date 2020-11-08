@@ -1,0 +1,89 @@
+.controllerImage {
+    width: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.joystick {
+    height: 580px;
+    position: absolute;
+    top: 130px;
+    left: 68px;
+}
+
+.buttonA {
+    height: 48px;
+    position: absolute;
+    top: 209px;
+    left: 303px;
+}
+
+.buttonB {
+    height: 48px;
+    position: absolute;
+    top: 168px;
+    left: 263px;
+}
+
+.cLeft {
+    height: 35px;
+    position: absolute;
+    top: 140px;
+    left: 322px;
+}
+
+.cRight {
+    height: 34px;
+    position: absolute;
+    top: 141px;
+    left: 387px;
+}
+.cUp {
+    height: 35px;
+    position: absolute;
+    top: 108px;
+    left: 355px; 
+}
+       
+
+.cDown {
+    height: 35px;
+    position: absolute;
+    top: 173px;
+    left: 355px;
+}
+
+.startButton {
+    height: 42px;
+    position: absolute;
+    top: 110px;
+    left: 232px;
+}
+
+.leftBumper {
+    height: 560px;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+}
+
+.rightBumper {
+    height: 560px;
+    position: absolute;
+    top: 5px;
+    left: 24px;
+}
+
+.leftTrigger {
+    height: 560px;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+}
+
+.rightTrigger {
+    height: 560px;
+    position: absolute;
+    top: 3px;
+    left: 26px;
+}
