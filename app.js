@@ -9,10 +9,14 @@ const getInputs = () => {
         const allButtons = response[0].buttons
         const x = response[0].axes[0]
         const y = response[0].axes[1]
+        const cButtons = [response[0].axes[2], response[0].axes[5]]
+
+        console.log(allButtons)
 
         updateJoystick(x,y)
         updateButtons(allButtons)
-        console.log(allButtons)
+        updateCameraButtons(cButtons)
+        // console.log(allButtons)
         // console.log(x,y)
     }, 16)
 }
@@ -25,8 +29,6 @@ const updateJoystick = (x,y) => {
     const centerY = 130
     
     joystick.style = `top: ${centerY + y}px; left: ${centerX + x}px; `
-   
-
 }
 
 const updateButtons = (allButtons) => {
@@ -43,7 +45,24 @@ const updateButtons = (allButtons) => {
             continue
         }
     }
-       
+}
 
+const updateCameraButtons = (cButtons) => {
+    const cUp = document.getElementsByClassName('cUp')
+    const cRight = document.getElementsByClassName('cRight')
+    const cDown = document.getElementsByClassName('cDown')
+    const cLeft = document.getElementsByClassName('cLeft')
+
+    for (let i=0; i < cButtons.length; i++) {
+        if (cButtons[i] == -1 && i == 0) {
+            cUp[0].style = `opacity: 1`
+        } else if (cButtons[i] == 1 && i == 0) {
+            cDown[0].style = `opacity: 1`
+        } else if (cButtons[1] == -1 && i == 1) {
+            cLeft[0].style = `opacity: 1`
+        } else if (cButtons[1] == 1 && i == 1) {
+            cRight[0].style = `opacity: 1`
+        }
+    }
 }
 
